@@ -1,0 +1,6 @@
+@LadderQuest.Server_HostAddress = http://localhost:5075
+
+GET {{LadderQuest.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

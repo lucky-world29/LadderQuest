@@ -1,0 +1,61 @@
+<!--<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">-->
+<div class="game-container">
+
+  <div class="game-header">
+    <h1>🪜 LadderQuest</h1>
+    <p>Daily Word Ladder Challenge</p>
+  </div>
+
+  <div class="board">
+
+    <div class="row locked">
+      🔒 {{ startWord }}
+    </div>
+
+    <div class="row">
+      <input type="text"
+             maxlength="4"
+             [(ngModel)]="enteredWord"
+             placeholder="Enter word" />
+    </div>
+
+    <div class="row empty"></div>
+
+    <div class="row empty"></div>
+
+    <div class="row empty"></div>
+
+    <div class="row locked">
+      🔒 {{ targetWord }}
+    </div>
+
+  </div>
+
+  <div class="action-buttons">
+    <button class="secondary-btn">
+      Reveal Row
+    </button>
+
+    <button class="secondary-btn">
+      Hint
+    </button>
+
+    <button class="primary-btn"
+            (click)="submitMove()">
+      Submit
+    </button>
+  </div>
+
+  <div class="history-card">
+    <h3>Your Ladder</h3>
+
+    <div class="ladder-list">
+      <div class="word-chip"
+           *ngFor="let word of ladder">
+
+        {{ word }}
+      </div>
+    </div>
+  </div>
+
+</div>

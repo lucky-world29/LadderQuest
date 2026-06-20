@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="ladderquest.client/ladderquest.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="LadderQuest.Server/LadderQuest.Server.csproj" />
+</Solution>
